@@ -16,12 +16,10 @@ dependencies:
 
   cupertino_icons: ^1.0.6
 
+  flutter_riverpod: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_riverpod: ^2.5.1
-
-  # Optional: for generating Riverpod providers (improves code generation)
   build_runner: ^2.3.2
   riverpod_generator: ^2.4.0
   riverpod_lint: ^2.3.10
