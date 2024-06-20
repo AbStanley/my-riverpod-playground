@@ -54,21 +54,4 @@ final complexProvider = NotifierProvider<ComplexNotifier, Map<String, dynamic>>(
 });
 
 // Example usage in a widget
-class ComplexWidget extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final complexState = ref.watch(complexProvider);
-    final complexNotifier = ref.read(complexProvider.notifier);
 
-    return Column(
-      children: [
-        Text('User: ${complexState['userName']}'),
-        Text('Todo Count: ${complexState['todoCount']}'),
-        ElevatedButton(
-          onPressed: () => complexNotifier.addTodoAndUpdateCount('New Todo'),
-          child: Text('Add Todo'),
-        ),
-      ],
-    );
-  }
-}
