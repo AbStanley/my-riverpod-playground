@@ -1,8 +1,7 @@
-// Example usage in a widget
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import 'notifier_example.dart';
+import '/notifier/notifier.dart';
 
 class ComplexWidget extends ConsumerWidget {
   const ComplexWidget({super.key});
