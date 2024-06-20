@@ -9,7 +9,7 @@ class ComplexWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final complexState = ref.watch(complexProvider);
-    final complexNotifier = ref.read(complexProvider.notifier);
+    final complexNotifier = ref.read(v2ComplexProvider.notifier);
 
     return Column(
       children: [
