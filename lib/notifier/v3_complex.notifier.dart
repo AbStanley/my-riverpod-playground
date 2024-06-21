@@ -6,7 +6,7 @@ import 'todo_notifier.provider.dart';
 final maxTodosProvider = Provider<int>((ref) => 15);
 
 class V3ComplexNotifier extends Notifier<Map<String, dynamic>> {
-  String get initialUserName => ref.read(userNameProvider);
+  late final String _initialUserName = ref.read(userNameProvider);
   int get maxTodos => ref.read(maxTodosProvider);
 
   @override
@@ -15,8 +15,8 @@ class V3ComplexNotifier extends Notifier<Map<String, dynamic>> {
     final todos = ref.watch(todoProvider);
 
     return {
-      'initialUserName': initialUserName,
-      'currentUserName': initialUserName,
+      'initialUserName': _initialUserName,
+      'currentUserName': _initialUserName,
       'todoCount': todos.length,
       'maxTodos': maxTodos,
     };
@@ -31,7 +31,7 @@ class V3ComplexNotifier extends Notifier<Map<String, dynamic>> {
         ...state,
         'todoCount': state['todoCount'] + 1,
       };
-    }
+    } else {}
   }
 
   void updateCurrentUserName() {
