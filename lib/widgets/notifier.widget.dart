@@ -14,7 +14,7 @@ class ComplexWidget extends ConsumerWidget {
     return Column(
       children: [
         Text('User: ${complexState['userName']}'),
-        Text('Todo Count: ${complexState['todoCount']}'),
+        Text(key: const Key('current count'), 'Todo Count: ${complexState['todoCount']}'),
         ElevatedButton(
           onPressed: () => complexNotifier.addTodoAndUpdateCount('New Todo'),
           child: const Text('Add Todo'),
